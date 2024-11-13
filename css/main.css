@@ -3,7 +3,22 @@ för bakgrundsfärgen av bootstrap */
 
 :root {
     --light: #e7f1e8;
+    --primary: #769a7a;
 }
 .bg-light {
     background-color: var(--light) !important;
+}
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.navbar {
+    height: 80px;
+}
+
+@media(max-width: 991px) {
+    .sidebar {
+        background-color: rgba(118, 154, 122, 0.6);
+        backdrop-filter: blur(10px);
+    }
 }
