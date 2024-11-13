@@ -1,0 +1,9 @@
+/* Definierar egna färger som CSS-variabler, gör light till ljusgrön färg
+för bakgrundsfärgen av bootstrap */
+
+:root {
+    --light: #e7f1e8;
+}
+.bg-light {
+    background-color: var(--light) !important;
+}
