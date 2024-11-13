@@ -61,7 +61,38 @@
                     </tr>
                 </tbody>
             </table>
-        </div>  
+        </div>
+
+        <!-- Formulär -->
+        <h2 class="mt-5 mb-3 text-center">Formulär för att lägga till användare</h2>
+        <form class="border p-4 rounded">
+            <div class="mb-3">
+                <label for="username" class="form-label">Användarnamn</label>
+                <input type="text" class="form-control" id="username" placeholder="Ange användarnamn">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-postadress</label>
+                <input type="email" class="form-control" id="email" placeholder="Ange e-postadress">
+            </div>
+            <div class="mb-3">
+                <label for="role" class="form-label">Roll</label>
+                <select class="form-select" id="role">
+                    <option>Student</option>
+                    <option>Lärare</option>
+                    <option>Admin</option>
+                    <option>IT</option>
+                </select>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="notifications">
+                <label class="form-check-label" for="notifications">Aktivera notiser</label>
+            </div>
+            <div class="mb-3">
+                <label for="bio" class="form-label">Biografi</label>
+                <textarea class="form-control" id="bio" rows="3" placeholder="Ange en kort biografi"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Lägg till användare</button>
+        </form>
     </div>
 </main>
     
