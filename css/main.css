@@ -5,6 +5,7 @@ för bakgrundsfärgen av bootstrap */
     --light: #e7f1e8;
     --primary: #769a7a;
 }
+
 .bg-light {
     background-color: var(--light) !important;
 }
