@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
               <a href="index.html" class="navbar-item">STARTSIDA</a>
               <a href="bootstrap.html" class="navbar-item">BOOTSTRAP</a>
               <a href="bulma.html" class="navbar-item">BULMA</a>
-              <a href="#" class="navbar-item">PUBLICERING</a>
+              <a href="publish.html" class="navbar-item">PUBLICERING</a>
             </div>
           </div>
         </div>
@@ -38,15 +38,16 @@
       <main class="box is-rounded">
         <h1 class="title has-text-centered mb-5">Bulma</h1>
       
-        <h2 class="subtitle has-text-centered mt-5 mb-3" style="font-weight:bold;">Tabell</h2>
-        <div class="table-container">
-          <table class="table is-fullwidth is-bordered is-striped">
+        <h2 class="subtitle has-text-centered mt-5 mb-3 is-4" style="font-weight:bold;">Tabell</h2>
+
+        <div class="table-container" style="overflow-x: auto;">
+          <table class="table is-fullwidth is-bordered is-striped" style="min-width: 700px;">
             <thead class="has-background-info">
               <tr>
-                <th class="has-text-centered">Produktnamn</th>
-                <th class="has-text-centered">Kategori</th>
-                <th class="has-text-centered">Pris</th>
-                <th class="has-text-centered">Lagerstatus</th>
+                <th class="has-text-centered" style="white-space: nowrap;">Produktnamn</th>
+                <th class="has-text-centered" style="white-space: nowrap;">Kategori</th>
+                <th class="has-text-centered" style="white-space: nowrap;">Pris</th>
+                <th class="has-text-centered" style="white-space: nowrap;">Lagerstatus</th>
               </tr>
             </thead>
             <tbody>
@@ -83,7 +84,77 @@
             </tbody>
           </table>
         </div>
+
+        <!--Formulär-->
+      <form class="form">
+        <h2 class="subtitle has-text-centered mt-5 mb-3 is-4" style="font-weight:bold;">Formulär</h2>
+        <div class="box p-5">       
+        <div class="field p-2">
+            <label class="label" for="name">Produktnamn</label>
+            <div class="control">
+              <input class="input" type="text" id="name" placeholder="Exempel: Kaffekokare">
+            </div>
+          </div>
+
+        <div class="field p-2">
+            <label class="label" for="category">Kategori</label>
+            <div class="control">
+              <div class="select">
+                <select id="category">
+                  <option>Välj kategori</option>
+                  <option>Elektronik</option>
+                  <option>Kläder</option>
+                  <option>Hushållsvaror</option>
+                </select>
+              </div>
+            </div>
+        </div>
+
+        <div class="field p-2">
+            <label class="label" for="price">Pris</label>
+            <div class="control">
+              <input class="input" type="text" id="price" placeholder="Exempel: 9 999 kr">
+            </div>
+          </div>
+
+          <div class="field p-2">
+            <label class="label">Lagerstatus</label>
+            <div class="control">
+              <label class="checkbox" for="availabilityInStock">
+                <input type="checkbox" id="availabilityInStock" name="availability" value="inStock"> I lager
+              </label>
+              <label class="checkbox" for="availabilityFewLeft">
+                <input type="checkbox" id="availabilityFewLeft" name="availability" value="fewLeft"> Få kvar
+              </label>
+              <label class="checkbox" for="availabilityOutOfStock">
+                <input type="checkbox" id="availabilityOutOfStock" name="availability" value="outOfStock"> Ej i lager
+              </label>
+            </div>
+          </div>
+          
+          <div class="field p-2">
+            <label class="label" for="description">Beskrivning</label>
+            <div class="control">
+              <textarea class="textarea" id="description" placeholder="Beskriv produkten här"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button class="button is-fullwidth is-info p-5">Skicka</button>
+            </div>
+           </div>
+        </div>
+       </form>
       </main>
     </div>
+    <footer class="footer has-background-info has-text-white p-5">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 Julie Andersson<br>
+                Moment 1 DT193G - CSSramverk.
+            </p>
+        </div>
+      </footer>
+      
   </body>
 </html>
