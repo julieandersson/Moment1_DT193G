@@ -12,10 +12,6 @@ för bakgrundsfärgen av bootstrap */
     background-color: var(--primary) !important;
 }
 
-.navbar {
-    height: 80px;
-}
-
 @media(max-width: 991px) {
     .sidebar {
         background-color: rgba(118, 154, 122, 0.6);
