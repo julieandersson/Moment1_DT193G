@@ -20,7 +20,7 @@ för bakgrundsfärgen av bootstrap */
     }
 }
 
-ul {
+.separate-list {
     list-style-type: disc !important; /* sätter !important för att tvinga punkter vid osorterad lista */
     padding-left: 20px;
   }
