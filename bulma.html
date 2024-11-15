@@ -6,18 +6,20 @@
     <title>Bulma</title>
     <!--Bulma CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <!-- Länkar in Fontawesome för ikoner -->
+    <script src="https://kit.fontawesome.com/41ba6d6515.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <!--JS för navbar-->
     <script defer src="js/main.js"></script>
   </head>
-  <body class="has-background-light">
-    <nav class="navbar is-info p-3">
+  <body class="has-background-light"> <!--Sätter bakgrundsfärgen på sidan-->
+    <nav class="navbar is-info p-3"> <!--Definierar navbar med ljusblå bakgrund och padding på 3-->
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item" href="index.html" style="font-weight:bold;">
               MOMENT 1
             </a>
-            <span class="navbar-burger burger" data-target="navMenu">
+            <span class="navbar-burger burger" data-target="navMenu"> <!--Hamburgermney som visas på mindre skärmar-->
               <span></span>
               <span></span>
               <span></span>
@@ -34,16 +36,95 @@
         </div>
       </nav>
 
-      <div class="container mt-5 mb-5">
-      <main class="box is-rounded">
+      <div class="container mt-5 mb-5"> <!--Huvudinnehåll/container med margin top och bottom-->
+      <main class="box is-rounded"> <!--rounded för rundade hörn-->
         <h1 class="title has-text-centered mb-5">Bulma</h1>
+
+        <section class="mb-4">
+            <h2 class="subtitle has-text-weight-bold">Vad är Bulma?</h2>
+            <p class="content">
+                Bulma är ett modernt CSS-ramverk som fokuserar på enkelhet och användarvänlighet. 
+                Det är flexbox-baserat, vilket gör det enkelt att skapa responsiva layouter 
+                med minimal ansträngning. 
+                <br>
+                Läs mer på deras <a href="https://bulma.io" target="_blank" class="has-text-link has-text-weight-bold">officiella webbplats</a>.
+            </p>
+        </section>
+        
+        <section> <!--Sektion för för- och nackdelar-->
+            <h2 class="subtitle has-text-weight-bold">För- och nackdelar</h2>
+            <p class="content">
+                De främsta fördelarna enligt mig, efter att ha testat på Bulma, är de enkla 
+                och konsekventa klassnamnen. Dessa gör det lätt att förstå och använda ramverket utan att behöva lära sig svår syntax, vilket underlättar utvecklingsprocessen och 
+                gör koden enkel att förstå och hantera. Det är även enkelt att skapa en responsiv layout utan att behöva skriva överdrivet mycket CSS. 
+                Jag tycker även att dokumentationen är tydlig. Nackdelarna enligt mig är att ramverket inte inkluderar inbyggd JavaScript-funktionalitet, vilket gör att det 
+                kan krävas mer manuellt arbete för vissa funktioner. I min hamburgermeny har jag exempelvis behövt implementera egen js-kod för att få den att fungera. Denna nackdel innebär en större utvecklingsbörda 
+                jämfört med t.ex. ramverk som Bootstrap, som har färdiga js-komponenter. Dessutom har Bulma ett mer begränsat urval av färdiga, mer avancerade komponenter. Detta innebär att vissa 
+                komponenter behövs skapas från grunden.
+            </p>
+            <!--Definierar en rad med kolumner-->
+            <div class="columns">
+                <!-- Fördelar -->
+                <div class="column"> <!--Första kolumnen-->
+                    <!--success för grön färg-->
+                    <div class="box has-background-success-light">
+                        <h3 class="subtitle has-text-success">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </span>
+                                <span>Fördelar</span>
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span class="tag is-primary">1</span> Enkla och konsekventa klassnamn.
+                            </li>
+                            <li>
+                                <span class="tag is-primary">2</span> Enkelt att skapa responsiv layout utan mycket extra CSS.
+                            </li>
+                            <li>
+                                <span class="tag is-primary">3</span> Bra och tydlig dokumentation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Nackdelar -->
+                <div class="column"> <!--Andra kolumnen-->
+                    <!--danger för röd färg-->
+                    <div class="box has-background-danger-light">
+                        <h3 class="subtitle has-text-danger">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </span>
+                                <span>Nackdelar</span>
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <span class="tag is-danger">1</span> Kan kräva mer manuellt arbete för vissa funktioner pga avsaknad inbyggd JavaScript-funktionalitet.
+                            </li>
+                            <li>
+                                <span class="tag is-danger">2</span> Begränsat urval av färdiga avancerade komponenter.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
       
+        <!--Tabellrubrik med centrerad text-->
         <h2 class="subtitle has-text-centered mt-5 mb-3 is-4" style="font-weight:bold;">Tabell</h2>
 
+        <!--Behåller tabellen responsiv med horisontell scrollning-->
         <div class="table-container" style="overflow-x: auto;">
+            <!--table med full bredd, kanter och randig stil-->
           <table class="table is-fullwidth is-bordered is-striped" style="min-width: 700px;">
             <thead class="has-background-info">
               <tr>
+                <!--förhindrar radbrytning med nowrap-->
                 <th class="has-text-centered" style="white-space: nowrap;">Produktnamn</th>
                 <th class="has-text-centered" style="white-space: nowrap;">Kategori</th>
                 <th class="has-text-centered" style="white-space: nowrap;">Pris</th>
@@ -88,7 +169,8 @@
         <!--Formulär-->
       <form class="form">
         <h2 class="subtitle has-text-centered mt-5 mb-3 is-4" style="font-weight:bold;">Formulär</h2>
-        <div class="box p-5">       
+        <!--Formulär i box med padding-->
+        <div class="box p-5">
         <div class="field p-2">
             <label class="label" for="name">Produktnamn</label>
             <div class="control">
@@ -100,6 +182,7 @@
             <label class="label" for="category">Kategori</label>
             <div class="control">
               <div class="select">
+                <!--dropdown-lista för kategorier-->
                 <select id="category">
                   <option>Välj kategori</option>
                   <option>Elektronik</option>
@@ -148,6 +231,8 @@
        </form>
       </main>
     </div>
+
+    <!--footer med ljusblå färg och vit text-->
     <footer class="footer has-background-info has-text-white p-5">
         <div class="content has-text-centered">
             <p>&copy; 2024 Julie Andersson<br>
