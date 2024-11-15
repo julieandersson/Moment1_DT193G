@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bulma</title>
+    <title>Publicering</title>
     <!--Bulma CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!--JS för navbar-->
     <script defer src="js/main.js"></script>
   </head>
-  <body class="has-background-light">
-    <nav class="navbar is-info p-3">
+  <body class="has-background-light"> <!--bakgrundsfärg light för sidan-->
+    <!--Navbar-->
+    <nav class="navbar is-info p-3"> <!--is-info för blå färg på navbar-->
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item" href="index.html" style="font-weight:bold;">
@@ -21,7 +22,7 @@
               <span></span>
               <span></span>
               <span></span>
-            </span>
+            </span> <!--hamburgermeny för mindre skärmar-->
           </div>
           <div id="navMenu" class="navbar-menu">
             <div class="navbar-end">
@@ -34,11 +35,74 @@
         </div>
       </nav>
 
+      <!--Huvudinnehåll-->
     <div class="container mt-5 mb-5">
+        <!--Boxkomponent med rundade hörn-->
     <main class="box is-rounded">
+        <!--centrerad huvudrubrik-->
+        <h1 class="title is-2 has-text-centered">Publicering av webbplatsen</h1>
+        <!--sektion för vald publiceringsplattform-->
+        <section class="mb-5">
+          <h2 class="subtitle is-4 has-text-weight-bold">Vald publiceringsplattform: Netlify</h2>
+          <p>Jag har valt att publicera webbplatsen via <a href="https://www.netlify.com/" target="_blank" class="has-text-link has-text-weight-bold">Netlify</a>,
+            som är en populär tjänst för att snabbt och enkelt publicera statiska webbplatser. Jag har tidigare använt Netlify, och något jag verkligen gillar är hur smidigt det är
+            att koppla samman GitHub-repot med Netlify så att jag automatiskt kan deploya förändringar varje gång jag uppdaterar min kod.</p>
+        </section>
+
+        <!--sektion för kodstöd och programmeringsspråk-->
+        <section class="mb-5">
+            <h3 class="subtitle is-4 has-text-weight-bold">Kodstöd och programmeringsspråk</h3>
+            <p>Netlify har stöd för flera programmeringsspråk och ramverk för att bygga och publicera webbplatser. Några av de mest populära språken och teknologierna är:</p><br>
+            <ul> <!--oordnad lista, sätter punkter i separat css-fil med !important-->
+              <li>HTML, CSS, JavaScript (för statiska webbplatser)</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>React, Vue.js, Angular, Svelte (för JavaScript-ramverk)</li>
+            </ul>
+          </section>
+
+          <!--sektion för fördelar och nackdelar-->
+        <section class="mb-5">
+          <h3 class="subtitle is-4 has-text-weight-bold">Fördelar och nackdelar med Netlify</h3>
+          <div class="columns"> <!--använder bulmas columnlayout för att dela upp innehållet i 2 delar-->
+            <div class="column is-half">
+              <div class="box has-background-info-light"> <!--box med ljusblå bakgrundsfärg-->
+                <h4 class="title is-5">Fördelar</h4>
+                <ul>
+                  <li>Gratis plan för mindre projekt.</li>
+                  <li>Automatiserad deploy från GitHub, GitLab eller Bitbucket.</li>
+                  <li>Höga hastigheter och bra prestanda för statiska webbplatser.</li>
+                  <li>Stöd för anpassad domän och HTTPS.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box has-background-danger-light"><!--box med ljusröd bakgrund-->
+                <h4 class="title is-5">Nackdelar</h4>
+                <ul>
+                  <li>Begränsade resurser på gratisplanen (såsom bandbredd, build-tid).</li>
+                  <li>Kan vara svårt att hantera komplexa backend-lösningar utan tilläggstjänster.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--sektion för arbetssätt för publicering-->
+        <section>
+            <h3 class="subtitle is-4 has-text-weight-bold">Arbetssätt för publicering</h3>
+            <p class="has-text-weight-bold">För att publicera webbplatsen till Netlify har jag:</p><br>
+            <ol class="pl-5"> <!--ol för ordnad (numrerad) lista-->
+              <li class="mb-4">Skapat ett GitHub-repo för mitt projekt.</li> <!-- margin-bottom för att skapa avstånd mellan listobjekten-->
+              <li class="mb-3">Kopplat GitHub-repot till Netlify.</li>
+              <li class="mb-3">Konfigurerat automatiska deploys, så att varje gång jag gör en commit på GitHub, deployas och uppdateras webbplatsen automatiskt.</li>
+            </ol>
+          </section>          
 
     </main>
     </div>
+
+    <!--footer med ljusblå färg och vit text-->
     <footer class="footer has-background-info has-text-white p-5">
         <div class="content has-text-centered">
             <p>&copy; 2024 Julie Andersson<br>

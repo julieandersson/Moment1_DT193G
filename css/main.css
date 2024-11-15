@@ -19,3 +19,8 @@ för bakgrundsfärgen av bootstrap */
         backdrop-filter: blur(10px);
     }
 }
+
+ul {
+    list-style-type: disc !important; /* sätter !important för att tvinga punkter vid osorterad lista */
+    padding-left: 20px;
+  }
